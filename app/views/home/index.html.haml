@@ -1,10 +1,14 @@
-.well
-  %h1.centered Parkinson's Exams Using Leap Motion
-  .row
-    .col-lg-12{style: 'text-align: center'}
-      %iframe{src: "http://player.vimeo.com/video/77449238?title=0&amp;byline=0&amp;portrait=0&amp;color=ff9933", frameborder: 0, width: 500, height: 281, webkitallowfullscreen: true, mozallowfullscreen: true, allowfullscreen: true}
-  .row
-    .col-lg-6{style: 'text-align: center'}
-      = link_to 'Review Exams', exams_path, class: 'btn btn-primary'
-    .col-lg-6{style: 'text-align: center'}
-      = link_to 'New Exam', new_exam_path, class: 'btn btn-primary'
+%br
+.row
+  .col-lg-8
+    .well
+      %h1{style: 'text-align: center'} Parkinson's
+      .row
+        .col-lg-12{style: 'text-align: center'}
+          %iframe{src: "http://player.vimeo.com/video/77449238?title=0&amp;byline=0&amp;portrait=0&amp;color=ff9933", frameborder: 0, width: 500, height: 281, webkitallowfullscreen: true, mozallowfullscreen: true, allowfullscreen: true}
+      %br
+      .row
+        .col-lg-6{style: 'text-align: center'}
+          = link_to 'Review Exams', exams_path, class: 'btn btn-primary'
+        .col-lg-6{style: 'text-align: center'}
+          = link_to 'New Exam', '/admin/exam/new', class: 'btn btn-primary'

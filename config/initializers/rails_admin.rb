@@ -30,4 +30,15 @@ RailsAdmin.config do |config|
     history_index
     history_show
   end
+
+  config.model 'Exam' do
+    edit do
+      field :patient
+      field :recorder do
+        partial 'recorder'
+      end
+      field :recording
+      field :notes
+    end
+  end
 end
