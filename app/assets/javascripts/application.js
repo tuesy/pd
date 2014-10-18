@@ -14,4 +14,9 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require turbolinks
+//= require three.min
+//= require leap-0.6.0
+//= require leap-plugins-0.1.6
+//= require leap.rigged-hand-0.1.4
+//= require leap.playback-0.2.1
 //= require_tree .
