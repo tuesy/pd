@@ -1,4 +1,6 @@
-%h1 New Exam
-- form_for resource do |f|
+%h1 New Session
+
+- form_for resource, multipart: true do |f|
+  = f.file_field :recording
   = f.text_field :notes
   = submit_tag 'Save'

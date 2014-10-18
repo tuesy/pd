@@ -32,7 +32,7 @@
 :javascript
   Leap.loop({})
     .use('playback', {
-      recording: '/#{params[:recording] || 'waiting-short'}.json.lz',
+      recording: '#{resource.recording.url.gsub(/\?.*/, '')}',
       requiredProtocolVersion: 6,
       pauseOnHand: true,
       loop: true
