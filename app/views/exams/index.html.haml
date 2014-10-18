@@ -1,0 +1,11 @@
+%h1 Exams
+%table.table.striped
+  %thead
+    %tr
+      %th Patient
+      %th Exam Date
+  %tbody
+    - collection.each do |x|
+      %tr
+        %td= link_to x.patient, x
+        %td= x.created_at.to_s(:stat)
