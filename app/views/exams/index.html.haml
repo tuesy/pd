@@ -1,15 +1,15 @@
-%h1 Exams
-%table.table-striped
+%h1 Review Exams
+%table.table-striped.table-hover.table-bordered
   %thead
     %tr
-      %th Patient Name
-      %th Exam Date
-      %th Edit
-      %th Delete
+      %th.col-md-5 Patient Name
+      %th.col-md-5 Exam Date
+      %th.col-md-1 Edit
+      %th.col-md-1 Delete
   %tbody
     - collection.each do |x|
       %tr
-        %td= link_to x.patient, x
+        %td.patient-name= link_to x.patient, x
         %td= x.created_at.to_s(:stat)
         %td= link_to 'Edit', edit_exam_path(x)
         %td= link_to 'Delete', :method =>:delete, :data => {:confirm => "Are you sure?"}

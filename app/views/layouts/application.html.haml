@@ -28,43 +28,44 @@
           %span.icon-bar
           %span.icon-bar
           %span.icon-bar
-        .navbar-brand= link_to "Hand Tremor Tracker", root_path
+        .navbar-brand= link_to "Hand Tremor Tracker", root_path, style: "font-size:30px"
         .navbar-collapse.collapse.navbar-responsive-collapse
-          %ul.nav.navbar-nav
-            %li= link_to 'New Exam', 'admin/exam/new'
-            %li= link_to 'Review Exams', exams_path
-            %li= link_to 'Patients', '#'
-            / %li.dropdown
-            /   %a#themes.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
-            /     New Exam
-            /     %span.caret
-            /   %ul.dropdown-menu{"aria-labelledby" => "themes"}
-            /     %li
-            /       %a{:href => "../admin/exam/new"} Default
-            /     %li.divider
-            /     %li
-            /       %a{:href => "../cerulean/"} Stationary
-            /     %li
-            /       %a{:href => "../cosmo/"} Pinch
-            /     %li
-            /       %a{:href => "../cyborg/"} Grab
-            /     %li
-            /       %a{:href => "../darkly/"} Rotate
-            /     %li
-            /       %a{:href => "../flatly/"} Trace
-            / %li
-            /   %a{:href => "../help/"} Help
-          %ul.nav.navbar-nav.pull-right
-            -if current_user && user_signed_in?
-              %li Hi
-              %li= link_to current_user.email, '#'
-              %li= link_to "Edit Account", edit_user_registration_path
-              %li= link_to "Logout", destroy_user_session_path, :method => :delete
-              %li.divider
-            -else
-              %li= link_to "Log In", new_user_session_path
-              %li= link_to "Sign Up", new_user_registration_path
-
+          -if user_signed_in?
+            %ul.nav.navbar-nav
+              %li= link_to 'New Exam', 'admin/exam/new'
+              %li= link_to 'Review Exams', exams_path
+              %li= link_to 'Patients', '#'
+              / %li.dropdown
+              /   %a#themes.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+              /     New Exam
+              /     %span.caret
+              /   %ul.dropdown-menu{"aria-labelledby" => "themes"}
+              /     %li
+              /       %a{:href => "../admin/exam/new"} Default
+              /     %li.divider
+              /     %li
+              /       %a{:href => "../cerulean/"} Stationary
+              /     %li
+              /       %a{:href => "../cosmo/"} Pinch
+              /     %li
+              /       %a{:href => "../cyborg/"} Grab
+              /     %li
+              /       %a{:href => "../darkly/"} Rotate
+              /     %li
+              /       %a{:href => "../flatly/"} Trace
+              / %li
+              /   %a{:href => "../help/"} Help
+            %ul.nav.navbar-nav.pull-right
+              -if current_user && user_signed_in?
+                %li Hi
+                %li= link_to current_user.email, '#'
+                %li= link_to "Edit Account", edit_user_registration_path
+                %li= link_to "Logout", destroy_user_session_path, :method => :delete
+                %li.divider
+              -else
+                %li= link_to "Log In", new_user_session_path
+                %li= link_to "Sign Up", new_user_registration_path
+          -else
 
 
 
