@@ -16,6 +16,7 @@ gem 'inherited_resources', :git => 'git://github.com/tuesy/inherited_resources.g
 gem 'rails_admin'
 gem 'paperclip'
 gem 'enumerize'
+gem 'chartkick'
 
 group :production do
   gem 'rails_12factor'
