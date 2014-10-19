@@ -5,8 +5,6 @@ class ApplicationController < ActionController::Base
 
   before_filter :authenticate_user!
 
-  if user_signed_in?
-    current_user
-  end
+
 
 end

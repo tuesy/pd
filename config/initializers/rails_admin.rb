@@ -38,7 +38,7 @@ RailsAdmin.config do |config|
 
     edit do
       field :patient do
-        label "Patient's Name"
+        label "Patient Name"
       end
       field :type do
         label "Exam Type"

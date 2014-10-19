@@ -1,2 +1,4 @@
-class ExamsController < InheritedResources::Base
+class SessionsController < InheritedResources::Base
+
+
 end
