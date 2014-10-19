@@ -33,12 +33,20 @@ RailsAdmin.config do |config|
 
   config.model 'Exam' do
     edit do
-      field :patient
+      field :patient do
+        label "Patient's Name"
+      end
+      field :type do
+        label "Exam Type"
+      end
+      field :notes
       field :recorder do
         partial 'recorder'
+        label "Session Recorder"
       end
-      field :recording
-      field :notes
+      field :recording do
+        label "Recording File"
+      end
     end
   end
 end

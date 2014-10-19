@@ -1,8 +1,49 @@
+.navbar.navbar-default.navbar-fixed-top
+  .container
+    .navbar-header
+      %a.navbar-brand{:href => "../"} Hand Tremor Tracker
+      %button.navbar-toggle{"data-target" => "#navbar-main", "data-toggle" => "collapse", :type => "button"}
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+    #navbar-main.navbar-collapse.collapse
+      %ul.nav.navbar-nav
+        %li.dropdown
+          %a#themes.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+            New Exam
+            %span.caret
+          %ul.dropdown-menu{"aria-labelledby" => "themes"}
+            %li
+              %a{:href => "../admin/exam/new"} Default
+            %li.divider
+            %li
+              %a{:href => "../cerulean/"} Stationary
+            %li
+              %a{:href => "../cosmo/"} Pinch
+            %li
+              %a{:href => "../cyborg/"} Grab
+            %li
+              %a{:href => "../darkly/"} Rotate
+            %li
+              %a{:href => "../flatly/"} Trace
+        %li
+          %a{:href => "../help/"} Help
+      %ul.nav.navbar-nav.navbar-right
+        %li
+          %a{:href => "#"} Login
+        %li
+          %a{:href => "#"} Sign Up
+/ end of navbar
+
+%br
+%br
+%br
+%br
 %br
 .row
   .col-lg-8
     .well
-      %h1{style: 'text-align: center'} Parkinson's
+      %h1{style: 'text-align: center'} Example of Hand Tremor
       .row
         .col-lg-12{style: 'text-align: center'}
           %iframe{src: "http://player.vimeo.com/video/77449238?title=0&amp;byline=0&amp;portrait=0&amp;color=ff9933", frameborder: 0, width: 500, height: 281, webkitallowfullscreen: true, mozallowfullscreen: true, allowfullscreen: true}

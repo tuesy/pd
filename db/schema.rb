@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141018224438) do
+ActiveRecord::Schema.define(version: 20141019062928) do
 
   create_table "exams", force: true do |t|
     t.string   "patient"
@@ -23,13 +23,7 @@ ActiveRecord::Schema.define(version: 20141018224438) do
     t.integer  "recording_file_size"
     t.datetime "recording_updated_at"
     t.string   "recorder"
-  end
-
-  create_table "sessions", force: true do |t|
-    t.string   "patient"
-    t.text     "notes"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string   "type"
   end
 
 end
