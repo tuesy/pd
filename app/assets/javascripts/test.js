@@ -1,16 +1,3 @@
-<br>
-<br>
-<br>
-<h1>Pinch Strength</h1>
-
-<div id="output"></div>
-<div id="chart-1" style="height: 600px; width: 600px;"></div>
-
-
-<script type="text/javascript">
-
-
-
 function concatData(id, data) {
   return id + ": " + data + "<br>";
 }
@@ -68,6 +55,3 @@ Leap.loop(options, function(frame) {
   // Or how to keep data from live movement?
   new Chartkick.LineChart("chart-1", ps);
 });
-
-
-</script>
