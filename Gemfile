@@ -17,6 +17,8 @@ gem 'rails_admin'
 gem 'paperclip'
 gem 'enumerize'
 gem 'chartkick'
+gem 'devise'
+gem 'cancan'
 
 group :production do
   gem 'rails_12factor'

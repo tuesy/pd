@@ -53,4 +53,7 @@ RailsAdmin.config do |config|
       end
     end
   end
+
+  config.excluded_models << User
+
 end
