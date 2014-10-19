@@ -32,15 +32,16 @@ RailsAdmin.config do |config|
   end
 
   config.model 'Exam' do
+    list do
+
+    end
+
     edit do
       field :patient do
         label "Patient's Name"
       end
-      field :type, :enum do
+      field :type do
         label "Exam Type"
-        enum do
-          ['Stationary','Pinch','Grab','Rotate','Trace']
-        end
       end
       field :notes
       field :recorder do

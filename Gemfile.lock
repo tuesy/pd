@@ -76,6 +76,8 @@ GEM
     em-websocket (0.5.1)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
+    enumerize (0.8.0)
+      activesupport (>= 3.2)
     erubis (2.7.0)
     eventmachine (1.0.3)
     execjs (2.2.2)
@@ -269,6 +271,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   database_cleaner
   debugger
+  enumerize
   faker
   guard-livereload
   guard-rails

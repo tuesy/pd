@@ -15,6 +15,7 @@ gem "twitter-bootstrap-rails", git: 'https://github.com/seyhunak/twitter-bootstr
 gem 'inherited_resources', :git => 'git://github.com/tuesy/inherited_resources.git'
 gem 'rails_admin'
 gem 'paperclip'
+gem 'enumerize'
 
 group :production do
   gem 'rails_12factor'

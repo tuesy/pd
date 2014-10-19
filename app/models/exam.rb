@@ -3,4 +3,7 @@ class Exam < ActiveRecord::Base
   do_not_validate_attachment_file_type :recording
 
 
+  self.inheritance_column = nil
+  extend Enumerize
+  enumerize :type, in: ['Stationary','Pinch','Grab','Rotate','Trace']
 end
