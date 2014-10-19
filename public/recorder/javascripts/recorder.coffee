@@ -13,4 +13,3 @@ recorder.run (editableOptions) ->
 window.player = ->
 
   window.controller.plugins['playback'].player
-

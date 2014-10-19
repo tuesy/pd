@@ -19,20 +19,50 @@
     = yield :header
 
   %body
-    - unless @skip_nav
-      .navbar.navbar-default.navbar-static-top
-        .container
-          %button.navbar-toggle(type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse")
-            %span.icon-bar
-            %span.icon-bar
-            %span.icon-bar
-          = link_to "Parkinson's", root_path, class: 'navbar-brand'
-          .navbar-collapse.collapse.navbar-responsive-collapse
-            %ul.nav.navbar-nav
-              %li= link_to 'Exams', exams_path
-              %li= link_to 'New Exam', '/admin/exam/new'
-    .container
-      .row
-        .col-lg-12
-          = bootstrap_flash
-          = yield
+    / - unless @skip_nav
+    .navbar.navbar-default.navbar-fixed-top
+      .container
+        %button.navbar-toggle(type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse")
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+        .navbar-brand= link_to "Hand Tremor Tracker", root_path
+        .navbar-collapse.collapse.navbar-responsive-collapse
+          %ul.nav.navbar-nav
+            %li= link_to 'Review Exams', exams_path
+            %li= link_to 'New Exam', 'admin/exam/new'
+            / %li.dropdown
+            /   %a#themes.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+            /     New Exam
+            /     %span.caret
+            /   %ul.dropdown-menu{"aria-labelledby" => "themes"}
+            /     %li
+            /       %a{:href => "../admin/exam/new"} Default
+            /     %li.divider
+            /     %li
+            /       %a{:href => "../cerulean/"} Stationary
+            /     %li
+            /       %a{:href => "../cosmo/"} Pinch
+            /     %li
+            /       %a{:href => "../cyborg/"} Grab
+            /     %li
+            /       %a{:href => "../darkly/"} Rotate
+            /     %li
+            /       %a{:href => "../flatly/"} Trace
+            %li
+              %a{:href => "../help/"} Help
+          %ul.nav.navbar-nav.navbar-right
+            %li
+              %a{:href => "#"} Login
+            %li
+              %a{:href => "#"} Sign Up
+
+
+
+  / end of navbar
+
+  .container
+    .row
+      .col-lg-12
+        = bootstrap_flash
+        = yield
