@@ -54,6 +54,7 @@ RailsAdmin.config do |config|
     end
   end
 
+  # hide user accounts from dashboard
   config.excluded_models << User
 
 end
