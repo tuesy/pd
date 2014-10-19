@@ -9,7 +9,7 @@
   %tbody
     - collection.each do |x|
       %tr
-        %td.patient-name= link_to x.patient, x
-        %td= x.created_at.to_s(:stat)
+        %td.patient-name= x.patient
+        %td= link_to x.created_at.to_s(:stat), x
         %td= link_to 'Edit', edit_exam_path(x)
         %td= link_to 'Delete', :method =>:delete, :data => {:confirm => "Are you sure?"}
