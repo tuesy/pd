@@ -37,12 +37,12 @@ RailsAdmin.config do |config|
     end
 
     edit do
-      field :livedata do
-        partial 'livedata'
-      end
-      field :test do
-        partial 'test'
-      end
+      # field :livedata do
+      #   partial 'livedata'
+      # end
+      # field :test do
+      #   partial 'test'
+      # end
       field :patient do
         label "Patient Name"
       end

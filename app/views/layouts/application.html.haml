@@ -23,17 +23,18 @@
   %body
     - unless @skip_nav
       .navbar.navbar-default.navbar-fixed-top
-        .container
+        .container-navbar
           %button.navbar-toggle(type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse")
             %span.icon-bar
             %span.icon-bar
             %span.icon-bar
-          .navbar-brand= link_to "Hand Tremor Tracker", root_path, style: "font-size:30px"
+          .navbar-brand= link_to "Hand Tremor Tracker", root_path
           .navbar-collapse.collapse.navbar-responsive-collapse
             -if user_signed_in?
               %ul.nav.navbar-nav
-                %li= link_to 'New Exam', 'admin/exam/new'
-                %li= link_to 'Review Exams', '/admin/exam'
+                %li= link_to 'Sandbox', 'home/sandbox'
+                %li= link_to 'New Exam', rails_admin.new_path('exam'), method: :get
+                %li= link_to 'Review Exams', rails_admin.index_path('exam'), method: :get
                 %li= link_to 'Patients', '#'
                 / %li.dropdown
                 /   %a#themes.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
@@ -57,8 +58,7 @@
                 /   %a{:href => "../help/"} Help
               %ul.nav.navbar-nav.pull-right
                 -if current_user && user_signed_in?
-                  %li Hi
-                  %li= link_to current_user.email, '#'
+                  %li= link_to current_user.email
                   %li= link_to "Edit Account", edit_user_registration_path
                   %li= link_to "Logout", destroy_user_session_path, :method => :delete
                   %li.divider

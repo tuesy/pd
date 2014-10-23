@@ -1,10 +1,13 @@
 <br>
 <br>
 <br>
-<h1>Pinch Strength</h1>
-
 <div id="output"></div>
-<div id="chart-1" style="height: 600px; width: 600px;"></div>
+
+<h1>Pinch Strength</h1>
+<div id="pinch" style="height: 600px; width: 600px;"></div>
+
+<h1>Grab Strength</h1>
+<div id="grab" style="height: 600px; width: 600px;"></div>
 
 
 <script type="text/javascript">
@@ -47,10 +50,15 @@ Leap.loop(options, function(frame) {
 
   // getting data
   ps=[];
+  gs=[];
+  confidence=[];
   for (var i=0, len=frame.hands.length; i<len; i++) {
     hand = frame.hands[i];
-    handString = concatData("hand_type", hand.type);
     ps[i] = [i, hand.pinchStrength];
+    gs[i] = [i, hand.grabStrength];
+    confidence[i] = [i, hand.grabStrength];
+
+    handString = concatData("hand_type", hand.type);
     handString += concatData("pinch_strength", hand.pinchStrength);
     handString += concatData("grab_strength", hand.grabStrength);
     handString += concatData("confidence", hand.confidence);
@@ -58,16 +66,22 @@ Leap.loop(options, function(frame) {
     handString += "<br>";
 
     frameString += handString;
+
+
+
   }
 
 
+  // 60 fps
+  // total_frames=frame.hands.length;
+  // time=total_frames/60;
   // output
-  // output.innerHTML = frameString;
-  output.innerHTML = ps;
+  output.innerHTML = frameString;
+  // output.innerHTML = ps;
   // How to get data from a recording?
   // Or how to keep data from live movement?
-  new Chartkick.LineChart("chart-1", ps);
+  new Chartkick.LineChart("pinch", ps);
+  new Chartkick.LineChart("grab", gs);
 });
-
 
 </script>
